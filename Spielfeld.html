@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html>
  <head>
-  <script type="jquery-1.7.2.min.js"></script>
+  <script src="jquery-1.7.2.min.js"></script>
  </head>
  <body>
-  <table>
+  <h1> Reversi</h1>
+  <h2> S1 ist dran </h2>
+  <table>	
    <script>
-    
     for (var y = 0; y<= 7; y++) {  
      document.write("<tr>"); 
      for (var x = 0; x<= 7; x++) {
@@ -23,8 +25,23 @@
       document.write("</td>");  
      }
      document.write("</tr>");
-    }
-   </script>
+    } 
+    var spieler = 1;
+    $(document).ready(function(){
+    	$("img").click(function(event){	     
+	    	if (spieler === 1){
+	      		$("h2").text("S2 ist dran");
+	      		$(this).attr("src", "weiss.png");
+	      		spieler = 2;
+	  		}
+	  		else {
+	  			$("h2").text("S1 ist dran");
+	  			$(this).attr("src", "schwarz.png");
+	  			spieler = 1;	  		
+	  		}	
+  		}); 
+  	});
+  </script>
  </body>
 </html>  
 
