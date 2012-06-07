@@ -4,63 +4,10 @@
   <script src="jquery-1.7.2.min.js"></script>
  </head>
  <body>
-  <h1> Reversi</h1>
-  <h2> S1 ist dran </h2>
-  <table>	
-   <script>
-    for (var y = 0; y<= 7; y++) {  
-     document.write("<tr>"); 
-     for (var x = 0; x<= 7; x++) {
-      document.write("<td>"); 
-      if (x==3 && y==3) {
-       document.write("<img id=\"" +  x + y +"\" src =\"weiss.png\">");}
-      else if (x==4 && y==3) {
-       document.write("<img id=\"" +  x + y +"\" src =\"schwarz.png\"");} 
-      else if (x==3 && y==4) {
-       document.write("<img id=\"" +  x + y +"\" src =\"schwarz.png\"");}
-      else if (x==4 && y==4) {
-       document.write("<img id=\"" +  x + y +"\" src =\"weiss.png\"");}
-      else{
-       document.write("<img id=\"" +  x + y +"\" src =\"leer.png\"");}	
-      document.write("</td>");  
-     }
-     document.write("</tr>");
-    } 
-    var spieler = 1;
-    $(document).ready(function(){
-    	$("img").click(function(event){	     
-	    	if (spieler === 1){
-          console.log($(this).attr("src"));
-          if ($(this).attr("src") === "leer.png") {             
-	      		$("h2").text("S2 ist dran");
-	      		$(this).attr("src", "weiss.png");
-	      		spieler = 2;
-          }
-          else if ($(this).attr("src") === "schwarz.png"){
-            alert("this field is occupied")
-          }  
-          else if ($(this).attr("src") === "weiss.png"){
-            alert("this field is occupied")    
-          }
-	  		}
-	  		else { 
-          console.log($(this).attr("src"));
-          if ($(this).attr("src") === "leer.png") {          
-	  			  $("h2").text("S1 ist dran");
-	  			  $(this).attr("src", "schwarz.png");
-	  			  spieler = 1;	
-          }
-          else if ($(this).attr("src") === "schwarz.png"){
-            alert("this field is occupied")
-          }
-          else if ($(this).attr("src") === "weiss.png"){
-            alert("this field is occupied")
-          }  
-	  		}	   
-  		}); 
-  	});
-
-  </script>
+  <h1> Othello </h1>
+  <h2> weiss beginnt</h2>
+  <table>
+  <script src="javascript.js"></script>	
  </body>
 </html>  
 
