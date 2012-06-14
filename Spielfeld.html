@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <script src="jquery-1.7.2.min.js"></script>
- </head>
- <body>
-  <h1> Othello </h1>
-  <h2> Weiss beginnt</h2>
-  <table bgcolor="8B4513"border="0" cellspacing="5" cellpadding="0">
-    <script src="javascript.js"></script>
-  </table>	
- </body>
-</html>  
+  <head>
+    <script src="jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body bgcolor="8B4513" text="003300">
+    <div id="wrapper">
+      <center>
+        <span class="header">
+          Othello
+        </span>
+        <p class="discription"> 
+          please give the mouse after your move to the other player because the game isn't network-capable yet
+        </p>
+        <h2>
+          white begins
+        </h2>
+        <br>
+        <table bgcolor="CD853F" id="Field" >
+          <script src="javascript.js">     
+          </script>
+        </table>
+        <br>
+        <form method="post">
+          <input type="button" class="submit" value="Refresh window"
+            onclick="window.location.reload()">
+        </form>
+      </center>
+    </div>
+  </body>
+</html> 
+
 
