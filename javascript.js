@@ -47,7 +47,7 @@ $(document).ready(function(){
     }   
   }, "");                                                                                      
 
-	$("img").click(function(event){ //wenn das Feld angeklickt wird passieren folgende Sachen
+	$("#Field").find("img").click(function(event){ //wenn das Feld angeklickt wird passieren folgende Sachen
   console.log ("bild clicked")	;
   if (player != 1) {
     return
@@ -74,7 +74,7 @@ var i = parseInt($(this).attr("id")); //macht alle Werte zu Zahlen
 var zug = function(color, playercolor, element, correctdirections)  { // Variable Zug wird definiert
       console.log(element);
       if ($(element).attr("src") === "empty.png") {  //wenn ein emptyes Feld angeklickt wird, dann           
-        $("h2").text(playercolor + "s move"); //ändert sich die Überschrift 
+        $("h2").text(playercolor + "'s turn"); //ändert sich die Überschrift 
         $(element).attr("src", color + ".png").removeClass("transparent");; //und die color
         $.each(correctdirections, function(k, direction) {
           var otherId = parseInt($(element).attr("id"))+direction          
